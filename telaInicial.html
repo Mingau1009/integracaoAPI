@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boas vindas</title>
+    <title>Fala Cumpadi</title>
     <link rel="stylesheet" href="Css/styles.css">
     <style></style>
 </head>
 <body>
     <div class="welcome-container">
         <div class="welcome-box">
-            <h1>Seja Bem-Vindo!!</h1>
+            <h1>Aoba Juliano</h1>
             <p id="welcomeMessageText"></p>
-            <button id="logoutButton" class="logout-button">Sair</button>
+            <button id="logoutButton" class="logout-button">Aperta aqui</button>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
 
             const updateWelcomeMessage = () => {
                 if (userEmail && tokenExpiry) {
-                    welcomeMessageText.innerHTML = `<span>${userEmail}</span>! <br>Data de expiração do token: <span>${tokenExpiry}</span>.`;
+                    welcomeMessageText.innerHTML = `<span>${userEmail}</span>! <br>O token irá expirar: <span>${tokenExpiry}</span>.`;
                 } else {
                     welcomeMessageText.textContent = 'Faça o login primeiramente.';
                     setTimeout(clearSessionAndRedirect, 300);
