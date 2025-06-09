@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'> <title>Login</title>
+        <link rel="stylesheet" href="Css/styles.css">
+        <script src="https://kit.fontawesome.com/2ca71d1b50.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="content first-content">
+                <div class="first-colunm">
+                    <h2 class="title title-primary">Bem-vindo</h2>
+                    <p class="description description-primary">Para permanecer conectado conosco, por favor</p>
+                    <p class="description description-primary">efetue o login com suas informações pessoais</p>
+                    <button id="signIn" class="button button-primary">Acessar</button>
+                </div>
+                <div class="second-colunm">
+                    <h2 class="title title-second">Crie sua conta</h2>
+                    <div class="social-midia">
+                        <ul class="list-social-midia">
+                            <a href="#" class="link-social-midia">
+                                <li class="item-social-midia">
+                                    <i class="fab fa-facebook-f"></i>
+                                </li>
+                            </a>
+                            <a href="#" class="link-social-midia">
+                                <li class="item-social-midia">
+                                    <i class="fab fa-google"></i>
+                                </li>
+                            </a>
+                            <a href="#" class="link-social-midia">
+                                <li class="item-social-midia">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <p class="description description-second">Ou cadastre-se: </p>
+<form class="form" id="registerForm">
+    <label class="label label-input" for="registerEmail">
+        <i class="fas fa-envelope icons"></i>
+        <input type="email" id="registerEmail" placeholder="E-mail" required>
+    </label>
+
+    <label class="label label-input" for="registerPassword">
+        <i class="fas fa-lock icons"></i>
+        <input type="password" id="registerPassword" placeholder="Senha" required>
+        <i class="fas fa-eye toggle-password" toggle="#registerPassword"></i>
+    </label>
+
+    <label class="label label-input" for="confirmPassword">
+        <i class="fas fa-lock icons"></i>
+        <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+        <i class="fas fa-eye toggle-password" toggle="#confirmPassword"></i>
+    </label>
+
+    <div id="registerMessage" class="form-message"></div>
+    <button type="submit" id="register" class="button button-second">Cadastrar</button>
+</form>
+</div>
+</div>
+
+<div class="content second-content">
+    <div class="first-colunm">
+        <h2 class="title title-primary">Ou realize o seu cadastro conosco!</h2>
+        <button id="signUp" class="button button-primary">Cadastrar</button>
+    </div>
+
+    <div class="second-colunm">
+        <h2 class="title title-second">Acesse com a sua conta</h2>
+        <div class="social-midia"></div>
+        <p class="description description-second">ou utilize seu e-mail e senha</p>
+
+        <form class="form" id="loginForm">
+            <label class="label label-input" for="loginEmail">
+                <i class="fas fa-envelope icons"></i>
+                <input type="email" id="loginEmail" placeholder="E-mail" required>
+            </label>
+
+            <label class="label label-input" for="loginPassword">
+                <i class="fas fa-lock icons"></i>
+                <input type="password" id="loginPassword" placeholder="Senha" required>
+                <i class="fas fa-eye toggle-password" toggle="#loginPassword"></i>
+            </label>
+
+            <div id="loginMessage" class="form-message"></div>
+            <a href="#" class="description description-second">Esqueceu sua senha?</a>
+            <button type="submit" id="access" class="button button-second">Acessar</button>
+        </form>
+    </div>
+    </div>
+    <script src="Js/login.js"></script>
+    </body>
+
+</html>

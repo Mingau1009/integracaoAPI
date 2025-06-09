@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas vindas</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <style></style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-box">
+            <h1>Seja Bem-Vindo!!</h1>
+            <p id="welcomeMessageText"></p>
+            <button id="logoutButton" class="logout-button">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const getEl = id => document.getElementById(id);
+            const userEmail = localStorage.getItem('userEmail');
+            const tokenExpiry = localStorage.getItem('tokenExpiry');
+            const authToken = localStorage.getItem('authToken');
+            const welcomeMessageText = getEl('welcomeMessageText');
+            const logoutButton = getEl('logoutButton');
+
+            const clearSessionAndRedirect = () => {
+                ['authToken', 'userEmail', 'tokenExpiry'].forEach(k => localStorage.removeItem(k));
+                window.location.href = 'index.html';
+            };
+
+            const updateWelcomeMessage = () => {
+                if (userEmail && tokenExpiry) {
+                    welcomeMessageText.innerHTML = `<span>${userEmail}</span>! <br>Data de expiração do token: <span>${tokenExpiry}</span>.`;
+                } else {
+                    welcomeMessageText.textContent = 'Faça o login primeiramente.';
+                    setTimeout(clearSessionAndRedirect, 300);
+                }
+            };
+
+            const init = () => {
+                if (!authToken) {
+                    clearSessionAndRedirect();
+                    return;
+                }
+                updateWelcomeMessage();
+                logoutButton?.addEventListener('click', clearSessionAndRedirect);
+            };
+
+            init();
+        });
+    </script>
+</body>
+</html>
