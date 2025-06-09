@@ -39,7 +39,7 @@ body{
     position: absolute;
     width: 40%;
     height: 100%;
-    background-color: #58af9b;
+    background-color: #1f14b1;
 }
 
 .first-content{
@@ -96,7 +96,7 @@ body{
 }
 
 .title-second{
-    color: #58af9b;
+    color: #5575df;
 }
 
 .description-primary{
@@ -147,8 +147,8 @@ body{
 }
 
 .link-social-midia:hover .item-social-midia{
-    background-color: #58af9b;
-    border: 1px solid #58af9b;
+    background-color: #1f14b1;
+    border: 1px solid #1f14b1;
     color: #ffffff;
 }
 
@@ -185,14 +185,14 @@ body{
 }
 
 .button-second{
-    background-color: #58af9b;
-    border: 1px solid #58af9b;
+    background-color: #3375aa;
+    border: 1px solid #3375aa;
 }
 
 .button-second:hover{
     background-color: #ffffff;
-    border: 1px solid #58af9b;
-    color: #58af9b;
+    border: 1px solid #3375aa;
+    color: #3375aa;
 }
 
 .icons{
@@ -394,4 +394,31 @@ body.principal-page {
 
 .logout-button:hover {
     background-color: #c0392b;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1f14b1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
